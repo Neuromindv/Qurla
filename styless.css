@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Moja Strona</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Treść z PDF</h2>
-            <p>1</p>
-        </section>
-        <section class="links">
-        body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
@@ -36,44 +19,22 @@ h1 {
     margin: 0;
 }
 
-h2 {
-    font-size: 1.8rem;
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    margin-top: 20px;
 }
 
-p {
+a {
+    display: inline-block;
+    margin-top: 10px;
     font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;
+    color: #1a73e8;
+    text-decoration: none;
 }
 
-.links {
-    margin: 20px 0;
-}
-
-.link-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.link-container a {
-    display: block;
-    transition: transform 0.3s;
-}
-
-.link-container img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.link-container a:hover {
-    transform: scale(1.05);
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -84,6 +45,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 20px;
 }
 
 /* Media queries dla urządzeń mobilnych */
@@ -91,14 +53,10 @@ footer {
     h1 {
         font-size: 1.8rem;
     }
-    h2 {
-        font-size: 1.4rem;
-    }
-    p {
+    a {
         font-size: 1rem;
     }
-    .link-container img {
-        width: 100px;
-        height: 100px;
+    .content {
+        padding: 0 10px;
     }
 }
